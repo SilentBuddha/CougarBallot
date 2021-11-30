@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome</title>
+
+    <!-- Bootstrap -->
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/CSSFrontEnd.css" rel="stylesheet" > -->
+    <link href = "/Login.css" rel = "stylesheet">
+  </head>
+  
+  <body>
+    <h1 class="text-center"><b>Welcome to CougarBallot!<br>Please select the level of privilege with which you wish to continue!</b></h1>
+    
+    <button id="admin" class="float-left submit-button" >Continue with administrator privileges.</button>
+
+    <script type="text/javascript">
+        document.getElementById("admin").onclick = function () {
+            location.href = "http://localhost:3000/land.html";
+        };
+    </script>
+
+    <button id="voter" class="float-left submit-button" >Continue with student privileges.</button>
+
+    <script type="text/javascript">
+        document.getElementById("voter").onclick = function () {
+            location.href = "http://localhost:3000/index.html";
+        };
+    </script>
+
+  </body>
+</html>

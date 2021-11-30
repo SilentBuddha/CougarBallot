@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Election Results</title>
+
+    <!-- Bootstrap -->
+    <link href="css/vote.css" rel="stylesheet" >
+  </head>
+  <body>
+    <div class="container" style="width: 650px;">
+      <div class="row">
+        <div class="col-lg-12">
+          <div id="loader">
+            <p class="text-center">Loading...</p>
+          </div>
+          <div id="content" style="display: none;">            
+            <form onSubmit="App.castVote(); return false;">
+              <div class="form-group">
+                <label for="selectPresident">Select President<br></label>
+                <select class="form-control" id="selectPresident">
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="selectVP">Select Vice President<br></label>
+                <select class="form-control" id="selectVP">
+                </select>
+              </div>
+              <div id="FS" class="form-group">
+              </div>
+              <div id="SS" class="form-group">
+              </div>
+              <div id="JS" class="form-group">
+              </div>
+              <div id="SRS" class="form-group">
+              </div>
+              <button type="submit" class="btn btn-primary">Vote</button>
+              <hr/>
+            </form>
+            <hr/>
+            <p id="accountAddress" class="text-center"></p>
+          </div>
+        </div>
+      </div>
+    <form method="get" action="/index.html">
+      <button type="submit">Back</button>
+    </form>
+    <form method="get" action="http://localhost/choose_privilege.html">
+      <button type="submit">Review privileges</button>
+    </form>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

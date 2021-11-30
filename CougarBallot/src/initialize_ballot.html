@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create a ballot</title>
+
+    <!-- Bootstrap -->
+    <link href="css/create_ballot.css" rel="stylesheet" >
+  </head>
+  <body>
+    <div class="container" style="width: 650px;">
+      <div class="row">
+        <div class="col-lg-12">
+              <h1 class="text-center"><b>College of Charleston</b></h1>
+              <h2 class="text-center"><b>New Ballot</b></h2>
+
+          <hr/>
+          <br/>
+          <div id="loader">
+            <p class="text-center">Loading...</p>
+          </div>
+          <div id="content" style="display: none;">
+            <label for="ballot_name">Ballot name:<br></label>
+            <input type="text" id="ballot_name" name="ballot_name">
+            <br>
+            <label for="numPCands"><br>Number of presidential candidates:<br></label>
+            <input type="number" id="numPCands" name="numPCands">
+            <br>
+            <label for="numVPCands"><br>Number of vice presidential candidates:<br></label>
+            <input type="number" id="numVPCands" name="numVPCands">
+            <div class="container3" style="width: 650px;">
+              <label for="numFSSeats"><br>Number of freshman senator seats:<br></label>
+              <input type="number" id="numFSSeats" name="numFSSeats">  
+              <label for="numFSCands"><br>Number of freshman senator candidates:<br></label>
+              <input type="number" id="numFSCands" name="numFSCands">         
+            </div>
+            <div class="container4" style="width: 650px;">
+              <label for="numSSSeats"><br/>Number of sophomore senator seats:<br></label>
+              <input type="number" id="numSSSeats" name="numSSSeats"> 
+              <label for="numSSCands"><br>Number of sophomore senator candidates:<br></label>
+              <input type="number" id="numSSCands" name="numSSCands">          
+            </div> 
+            <div class="container5" style="width: 650px;">
+              <label for="numJSSeats"><br/>Number of junior senator seats:<br></label>
+              <input type="number" id="numJSSeats" name="numJSSeats"> 
+              <label for="numJSCands"><br>Number of junior senator candidates:<br></label>
+              <input type="number" id="numJSCands" name="numJSCands">         
+            </div>
+            <div class="container6" style="width: 650px;">
+              <label for="numSRSSeats"><br/>Number of senior senator seats:<br></label>
+              <input type="number" id="numSRSSeats" name="numSRSSeats">  
+              <label for="numSRSCands"><br>Number of senior senator candidates:<br></label>
+              <input type="number" id="numSRSCands" name="numSRSCands">         
+            </div> 
+            <br>
+
+            <div class="form-group">
+              <label for="selectType">Select Election Style<br></label>
+              <select class="form-control" id="selectType">
+              </select>
+            </div>
+
+            <label for="start-time"><br>Choose a time to open the ballot:<br></label>
+            <input type="datetime-local" id="start-time"
+                name="start-time" value="2021-01-01T19:30"
+                min="2021-01-01T00:00" max="2022-01-01T00:00">
+
+
+            <label for="end-time"><br><br>Choose a time to close the ballot:<br></label>
+            <input type="datetime-local" id="end-time"
+                name="end-time" value="2021-01-01T19:30"
+                min="2021-01-01T00:00" max="2022-01-01T00:00">
+            <br><br>
+            <form onSubmit="App.initializeBallot(); return false;">
+              <button type="submit" class="btn add">Submit</button>
+            </form>
+            <br>
+            <form method="get" action="/add_Candidates.html">
+              <button type="submit">Continue</button>
+            </form>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

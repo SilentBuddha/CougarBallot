@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create a ballot</title>
+
+    <!-- Bootstrap -->
+    <link href="css/view_ballot.css" rel="stylesheet" >
+  </head>
+  <body>
+    <div class="container" style="width: 650px;">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="text-center"><b>College of Charleston</b></h1>
+          <h2 class="text-center"><b>Veiw the ballot</b></h2>
+          <hr/>
+          <br/>
+          <div id="loader">
+            <p class="text-center">Loading...</p>
+          </div>
+          <div id="content" style="display: none;">
+            <div id="header">
+            </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Name&nbsp;</th>
+                  <th scope="col">&nbsp;Style&nbsp;</th>
+                  <th scope="col">&nbsp;Opens&nbsp;</th>
+                  <th scope="col">&nbsp;Closes&nbsp;</th>
+                </tr>
+              </thead>
+              <tbody id="Ballot">
+              </tbody>
+            </table><br>
+            <h2><b>Candidates</b></h2><br>
+            <table class="Candidates">
+              <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Office</th>
+              </tr>
+              </thead>
+              <tbody id="candidatesList">
+              </tbody>
+            </table>
+            <br>
+          <form method="get" action="/land.html">
+            <button type="submit">Back</button>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

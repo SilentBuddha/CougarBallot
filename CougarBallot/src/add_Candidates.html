@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create a ballot</title>
+
+    <!-- Bootstrap -->
+    <link href="css/finish_ballot.css" rel="stylesheet" >
+  </head>
+  <body>
+    <div class="container" style="width: 650px;">
+      <div class="row">
+        <div class="col-lg-12">
+            <h1 class="text-center"><b>College of Charleston</b></h1>
+          <h2 class="text-center"><b>Add the Candidates</b></h2>
+
+          <hr/>
+          <br/>
+          <div id="loader">
+            <p class="text-center">Loading...</p>
+          </div>
+          <div id="content" style="display: none;">
+            <div class="container1" style="width: 650px;">
+              <h2>Presidential Candidates</h2>
+              <div id="pform">
+              </div>
+            <div class="container2" style="width: 650px;">
+              <h2>Vice Presidential Candidates</h2>
+              <div id="vpform">
+              </div>         
+            </div>
+            <div class="container3" style="width: 650px;">
+              <h2>Freshman Senator Candidates</h2>
+              <div id="fsform">
+              </div>        
+            </div>
+            <div class="container4" style="width: 650px;">
+              <h2>Sophomore Senator Candidates</h2>
+              <div id="ssform">
+              </div>       
+            </div> 
+            <div class="container5" style="width: 650px;">
+              <h2>Junior Senator Candidates</h2>
+              <div id="jsform">
+              </div>         
+            </div>
+            <div class="container6" style="width: 650px;">
+              <h2>Senior Senator Candidates</h2>
+             <div id="srsform">
+              </div>         
+            </div> 
+            <br>
+            <br>
+            <form onSubmit="App.submitCandidate(); return false;">
+              <button type="submit" class="btn add">Submit</button>
+              <br><br>
+            </form>
+            <form method="get" action="/reviewCandidates.html">
+              <button type="submit">Review Candidates</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

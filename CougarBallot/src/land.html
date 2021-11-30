@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Landing Page</title>
+
+    <!-- Bootstrap -->
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="css/land.css" rel="stylesheet" >
+  </head>
+  
+  <body>
+    <h1 class="text-center"><b>College of Charleston</b></h1>
+    <h2 class="text-center"><b>Welcome to CougarBallot!</b></h2>
+
+    <br>
+    <form method="get" action="/initialize_ballot.html">
+      <button type="submit">Create a ballot</button>
+    </form>
+    <br>
+    <form method="get" action="/view_ballot.html">
+      <button type="submit">View the ballot</button>
+    </form>
+    <br>
+    <form onSubmit="App.displayResults(); return false;">
+      <button type="submit" class="btn add">View the results</button>
+    </form>
+    <br>
+    <form method="get" action="http://localhost/choose_privilege.html">
+      <button type="submit">Review privileges</button>
+    </form>
+    <br>
+    <br>
+    <br>
+    <form method="get" action="http://localhost/logout.php">
+      <button type="submit">Logout</button>
+    </form>
+
+
+
+    
+
+    
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
